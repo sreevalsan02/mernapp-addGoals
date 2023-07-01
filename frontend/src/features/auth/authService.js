@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = '/api/users/'
+const API_URL = 'https://mernappgoals.onrender.com/api/users/'
 
 //Register user
 const register = async (userData) =>{
@@ -9,7 +9,7 @@ const register = async (userData) =>{
     if(response.data){
         localStorage.setItem('user',JSON.stringify(response.data))
     }
-
+  
     return response.data
 }
 
@@ -21,6 +21,7 @@ const login = async (userData) =>{
         localStorage.setItem('user',JSON.stringify(response.data))
     }
 
+    console.log(response.data)
     return response.data
 }
 
